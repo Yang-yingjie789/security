@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ntt.global</groupId>
+    <artifactId>spring-security</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <properties>
+        <ntt-security-version>1.0-SNAPSHOT</ntt-security-version>
+        <springframework-version>5.2.5.RELEASE</springframework-version>
+        <mysql-version>8.0.16</mysql-version>
+    </properties>
+    <modules>
+        <module>ntt-security-app</module>
+        <module>ntt-security-broswer</module>
+        <module>ntt-security-core</module>
+        <module>ntt-security-demo</module>
+    </modules>
+    <!--版本控制-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.spring.platform</groupId>
+                <artifactId>platform-bom</artifactId>
+                <version>Cairo-SR8</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.SR4</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source><!--source： 源代码编译版本；-->
+                    <target>1.8</target><!--target： 目标平台编译版本；-->
+                    <encoding>utf-8</encoding><!--encoding： 字符集编码。-->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
