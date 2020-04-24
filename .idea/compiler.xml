@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
-      <module name="ntt-security-app" target="1.8" />
-      <module name="ntt-security-broswer" target="1.8" />
-      <module name="ntt-security-core" target="1.8" />
-      <module name="ntt-security-demo" target="1.8" />
-      <module name="security" target="1.8" />
-    </bytecodeTargetLevel>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ntt-security-app" />
+        <module name="ntt-security-broswer" />
+        <module name="ntt-security-demo" />
+      </profile>
+      <profile name="Annotation profile for spring-security" enabled="true">
+        <sourceOutputDir name="../ntt-security-broswer/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../ntt-security-broswer/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ntt-security-core" />
+      </profile>
+    </annotationProcessing>
   </component>
 </project>
